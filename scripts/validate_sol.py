@@ -6,9 +6,9 @@ import csv
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
 
-from planning import dh_target_sol as dh
-from planning import fk_logic_target_sol as fk_logic
-from planning import ik_logic_target_sol as ik_logic
+from planning import dh_target as dh
+from planning import fk_logic_target as fk_logic
+from planning import ik_logic_target as ik_logic
 
 def validate(filename):
     fk_errors = []

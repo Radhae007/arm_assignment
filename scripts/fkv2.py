@@ -6,7 +6,8 @@ import numpy as np
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
 
-from planning import fk_logicv2
+from planning import fk_logic_target as fk_logicv2
+
 
 def main():
     parser = argparse.ArgumentParser(description="SO101 3-DOF Pure DH FK checks")
@@ -15,7 +16,7 @@ def main():
     parser.add_argument("--n", type=int, default=500, help="Number of sweep samples")
     args = parser.parse_args()
 
-    from planning import dh
+    from planning import dh_target as dh
     dh.print_table()
 
     if args.q is not None:

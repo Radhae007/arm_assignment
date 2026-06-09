@@ -4,18 +4,18 @@ import numpy as np
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
-from planning import dh
+from planning import dh_target as dh
 
 def fk(q):
     """
     Calls the DH model to get the transform, and returns position and rotation.
     """
     # TODO: Use dh.fk(q) to get the 4x4 matrix, then extract position and rotation
-    # T = dh.fk(q)
-    # return T[:3, 3].copy(), T[:3, :3].copy()
+    T = dh.fk(q)
+    return T[:3, 3].copy(), T[:3, :3].copy()
     
     # Placeholder:
-    return np.zeros(3), np.eye(3)
+    # return np.zeros(3), np.eye(3)
 
 def print_fk_row(label, q, pos):
     deg = np.degrees(q)
