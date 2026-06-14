@@ -6,8 +6,8 @@ import numpy as np
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(ROOT_DIR)
 
-from planning import dh
-from planning import ik_logicv2
+from planning import dh_target as dh
+from planning import ik_logic_target as ik_logicv2
 
 def main():
     parser = argparse.ArgumentParser(description="Teaching DH pure IK for SO101 3-DOF")

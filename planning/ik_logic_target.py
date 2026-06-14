@@ -92,7 +92,7 @@ def solve(target, q0=None, elbow="up"):
     q[1] = wrap_to_pi(q[1])
     q[2] = wrap_to_pi(q[2])
     
-    q = clamp_to_limits(q, limits)
+    # q = clamp_to_limits(q, limits)
 
     # 9. Compute validation metrics against 3D Forward Kinematics
     current_fk_pos = dh.position(q)
